@@ -1,0 +1,82 @@
+.login-popup {
+  position: fixed;
+  background-color: white;
+  width: 98%;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 200;
+
+  @mixin atSmaller {
+    width: 22rem;
+  }
+
+  @mixin atMedium {
+    width: 34.75rem;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    padding: 3rem 2rem;
+
+    @mixin atSmaller {
+      width: 265px;
+      padding: 3rem 1rem;
+    }
+
+    @mixin atMedium {
+      width: 265px;
+      padding: 7.375rem 0;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+
+    @mixin atSmaller {
+      margin-bottom: 2.5rem;
+    }
+
+    @mixin atMedium {
+      margin-bottom: 4.75rem;
+    }
+  }
+
+  &__input,
+  &__btn {
+    display: block;
+    width: 100%;
+  }
+
+  &__input,
+  &__btn {
+    margin-bottom: 1rem;
+
+    @mixin atSmaller {
+      margin-bottom: 1.4rem;
+    }
+
+    @mixin atMedium {
+      margin-bottom: 2.0625rem;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 0;
+  }
+
+  &__btn:last-child {
+    margin-bottom: 0;
+  }
+}

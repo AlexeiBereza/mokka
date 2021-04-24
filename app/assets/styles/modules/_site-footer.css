@@ -1,0 +1,85 @@
+.site-footer {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__container::after {
+    display: none;
+    content: "";
+    flex: 1;
+
+    @mixin atSmall {
+      display: block;
+    }
+  }
+
+  &__logo {
+    display: none;
+    flex: 1;
+
+    @mixin atSmaller {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 5.25rem;
+
+      @mixin atMedium {
+        width: 10.625rem;
+      }
+    }
+  }
+
+  &__nav {
+    @mixin atMedium {
+      padding: 0 10px;
+    }
+
+    @mixin atLarge {
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      margin: 13.5px 0;
+
+      @mixin atMedium {
+        margin: 60px 0;
+      }
+    }
+
+    li {
+      margin-right: 0.5rem;
+
+      @mixin atMedium {
+        margin-right: 1.375rem;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      transition: opacity 0.2s ease-in;
+      font-size: 0.625rem;
+
+      @mixin atMedium {
+        font-size: 1rem;
+      }
+
+      @mixin atLarge {
+        font-size: 1.25rem;
+      }
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,269 @@
+.hero-section {
+  position: relative;
+  height: 370px;
+  width: 100%;
+  background-color: $beigeLight;
+  padding: 24px 0;
+  overflow: hidden;
+
+  @mixin atMedium {
+    height: 470px;
+  }
+
+  @mixin atLarge {
+    height: 750px;
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @mixin atExtraLarge {
+      top: auto;
+      transform: none;
+    }
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      background-color: $mainBeige;
+      height: calc(100% - 17px);
+      width: 16px;
+
+      @mixin atSmaller {
+        display: block;
+      }
+
+      @mixin atMedium {
+        width: 28px;
+      }
+
+      @mixin atLarge {
+        top: 113px;
+        bottom: auto;
+        height: 315px;
+        width: 40px;
+      }
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      left: 7px;
+      top: 0;
+      border: 1px solid black;
+      height: calc(100% - 17px);
+      width: 16px;
+
+      @mixin atSmaller {
+        display: block;
+      }
+
+      @mixin atMedium {
+        left: 14px;
+        width: 28px;
+      }
+
+      @mixin atLarge {
+        left: 20px;
+        top: 96px;
+        height: 315px;
+        width: 40px;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    overflow: visible;
+    z-index: 0;
+
+    @mixin atLarge {
+      justify-content: center;
+      height: auto;
+    }
+
+    @mixin atExtraLarge {
+      justify-content: flex-start;
+    }
+  }
+
+  &__container::before,
+  &__container::after {
+    display: none;
+    position: absolute;
+    z-index: -1;
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+
+  &__container::before {
+    background-image: url("assets/images/vector/hero-vector.svg");
+    background-size: 745px 814px;
+    width: 745px;
+    height: 814px;
+    content: "";
+    right: -140px;
+    top: -217px;
+    transform: scale(0.46);
+
+    @mixin atLarge {
+      top: -30px;
+      transform: scale(0.8);
+    }
+
+    @mixin atExtraLarge {
+      right: -130px;
+      top: 0;
+      transform: none;
+    }
+  }
+
+  &__container::after {
+    background-image: url("assets/images/vector/hero-vector-2.svg");
+    background-size: 790px 816px;
+    width: 790px;
+    height: 816px;
+    content: "";
+    right: -250px;
+    top: -222px;
+    transform: scale(0.46);
+
+    @mixin atLarge {
+      right: -290px;
+      top: -20px;
+      transform: scale(0.8);
+    }
+
+    @mixin atExtraLarge {
+      right: -355px;
+      top: -10px;
+      transform: none;
+    }
+  }
+
+  &__heading {
+    max-width: 18.125rem;
+    position: relative;
+
+    @mixin atMedium {
+      max-width: none;
+      flex: 0 0 23.875rem;
+      margin-right: 1.8125rem;
+    }
+
+    @mixin atLarge {
+      flex: 0 0 490px;
+      margin-right: 0;
+    }
+
+    @mixin atExtraLarge {
+      flex: 0 0 562px;
+      margin-right: 0;
+    }
+  }
+
+  &__desc {
+    display: block;
+    font-size: 0.8125rem;
+    margin-bottom: 6px;
+
+    @mixin atSmaller {
+      font-size: 1rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.25rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.6rem;
+    }
+
+    @mixin atExtraLarge {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__title {
+    font-family: "Tenor Sans";
+    font-size: 1.5625rem;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+
+    @mixin atSmaller {
+      font-size: 2.125rem;
+      margin: 0 0 17px -2px;
+    }
+
+    @mixin atMedium {
+      font-size: 3.125rem;
+      margin: 0 0 17px -3px;
+    }
+
+    @mixin atLarge {
+      font-size: 3.8rem;
+      margin: 0 0 9px -4px;
+    }
+
+    @mixin atExtraLarge {
+      font-size: 4.375rem;
+      margin: 0 0 9px -4px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 42px 0;
+
+    @mixin atSmaller {
+      font-size: 1.25rem;
+      margin: 0 0 42px -2px;
+    }
+
+    @mixin atMedium {
+      font-size: 1.5rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.8rem;
+    }
+
+    @mixin atExtraLarge {
+      font-size: 2.125rem;
+    }
+  }
+
+  &__image {
+    display: none;
+    max-width: 15.25rem;
+
+    @mixin atLarge {
+      max-width: 450px;
+    }
+
+    @mixin atExtraLarge {
+      max-width: 32.5625rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.site-header {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow: visible;
+  z-index: 150;
+
+  @mixin atMedium {
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1;
+  }
+
+  &__logo {
+    img {
+      display: block;
+      width: 5.25rem;
+    }
+
+    @mixin atMedium {
+      img {
+        width: 6.75rem;
+      }
+    }
+
+    @mixin atLarge {
+      img {
+        width: 10.625rem;
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+
+    @mixin atLarge {
+      align-items: flex-end;
+    }
+  }
+
+  &__login {
+    display: none;
+    font-size: 1rem;
+    margin-bottom: -4px;
+
+    @mixin atMedium {
+      font-size: 0.875rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+    }
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+}

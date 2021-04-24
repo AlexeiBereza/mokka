@@ -1,0 +1,101 @@
+.your-order {
+  &__heading,
+  &__amount {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  &__heading {
+    margin-bottom: 0.8125rem;
+  }
+
+  &__amount {
+    display: block;
+    opacity: 0.5;
+    margin-bottom: 1.9375rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.625rem;
+    grid-row-gap: 1.25rem;
+    gap: 1.25rem 0.625rem;
+
+    @mixin atSmall {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 0.625rem;
+      grid-row-gap: 1.25rem;
+      gap: 1.25rem 0.625rem;
+    }
+
+    @mixin atMedium {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1.5rem;
+      gap: 1.5rem 1rem;
+    }
+
+    @mixin atLarge {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-column-gap: 4.25rem;
+      grid-row-gap: 1.875rem;
+      gap: 1.875rem 4.25rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    @mixin atMedium {
+      margin-bottom: 0.8rem;
+    }
+
+    @mixin atLarge {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 0.125rem;
+    font-size: 14px;
+
+    @mixin atSmall {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 17px;
+    }
+
+    @mixin atLarge {
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    font-size: 14px;
+
+    @mixin atSmall {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 17px;
+    }
+
+    @mixin atLarge {
+      font-size: 20px;
+    }
+  }
+}

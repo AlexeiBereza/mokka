@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Онлайн-магазин женской одежды МOKKA WEAR</title>
+  </head>
+  <body>
+    <header class="site-header wrapper">
+      <a href="/" class="site-header__logo"><img src="assets/images/icons/logo.png" alt="Logo" /></a>
+      <nav class="primary-nav">
+        <button class="primary-nav__login-mobile">Войти</button>
+        <ul>
+          <li><a class="text-thin" href="/catalog.html">Лето-2020</a></li>
+          <li><a class="text-thin" href="/catalog.html">Акции</a></li>
+          <li><a class="text-thin" href="/catalog.html">Платья</a></li>
+          <li><a class="text-thin" href="/catalog.html">Костюмы</a></li>
+          <li><a class="text-thin" href="/catalog.html">Комбинезоны</a></li>
+          <li><a class="text-thin" href="/catalog.html">Блузки</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__profile icon">
+        <button type="button" class="icon__star icon--m-right"><img src="assets/images/icons/star.svg" alt="Favourite items" /></button>
+        <a href="/cart.html" class="icon__cart icon--m-right"><img src="assets/images/icons/cart.svg" alt="Cart" /></a>
+        <button type="button" class="site-header__login">Войти</button>
+        <div class="hamburger">
+          <span class="hamburger__middle"></span>
+        </div>
+      </div>
+    </header>
+    <main class="page-section page-section--white page-section--catalog">
+      <div class="wrapper">
+        <nav class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="/">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb--active" aria-current="page">Корзина</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cart">
+        <h1 class="cart__heading wrapper">2 товара в корзине</h1>
+        <div class="cart__container vector vector-block">
+          <div class="wrapper wrapper--overflow-visible wrapper--relative">
+            <div class="cart__table-heads">
+              <span class="cart__image-head"></span>
+              <span class="cart__desc-head"></span>
+              <span class="cart__quantity-head">Количество</span>
+              <span class="cart__price-head">Цена</span>
+              <span class="cart__actions-head"></span>
+            </div>
+            <div class="cart__item">
+              <div class="cart__image"><img src="assets/images/catalog/catalog1.jpg" alt="" /></div>
+              <div class="cart__info">
+                <div class="cart__desc">
+                  <h4 class="cart__item-title">Платье Antaliya</h4>
+                  <p class="cart__article">Артикул: 1234567890</p>
+                  <p class="cart__color">Цвет: <span class="cart__selected-color" style="background: #f10a8d"></span></p>
+                  <p class="cart__size">Размер: S</p>
+                </div>
+                <div class="cart__quantity">
+                  <button class="cart__remove">-</button>
+                  <div class="cart__amount">1</div>
+                  <button class="cart__add">+</button>
+                </div>
+                <div class="cart__price">3000 руб.</div>
+                <div class="cart__actions">
+                  <button class="cart__delete"><img src="assets/images/icons/cross.svg" alt="Delete" /></button>
+                  <button class="cart__star"><img src="assets/images/icons/star.svg" alt="Favourite" /></button>
+                </div>
+              </div>
+            </div>
+            <div class="cart__item">
+              <div class="cart__image"><img src="assets/images/catalog/catalog7.jpg" alt="" /></div>
+              <div class="cart__info">
+                <div class="cart__desc">
+                  <h4 class="cart__item-title">Платье Eseniya</h4>
+                  <p class="cart__article">Артикул: 1034567892</p>
+                  <p class="cart__color">Цвет: <span class="cart__selected-color" style="background: #c37d69"></span></p>
+                  <p class="cart__size">Размер: M</p>
+                </div>
+                <div class="cart__quantity">
+                  <button class="cart__remove">-</button>
+                  <div class="cart__amount">1</div>
+                  <button class="cart__add">+</button>
+                </div>
+                <div class="cart__price">5000 руб.</div>
+                <div class="cart__actions">
+                  <button class="cart__delete"><img src="assets/images/icons/cross.svg" alt="Delete" /></button>
+                  <button class="cart__star"><img src="assets/images/icons/star.svg" alt="Favourite" /></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper cart__bottom-block">
+          <div class="cart__total-container">
+            <div class="cart__promo-code">
+              <span>Код скидки</span>
+              <input type="text" />
+            </div>
+            <div class="cart__cart-price">
+              <span class="cart__left">Товары на сумму:</span>
+              <span class="cart__right">8000 руб</span>
+            </div>
+            <div class="cart__cart-price">
+              <span class="cart__left">Доставка:</span>
+              <span class="cart__right">0 руб</span>
+            </div>
+            <div class="cart__cart-price cart__total">
+              <span class="cart__left">Стоимость заказа:</span>
+              <span class="cart__right text-bold">8000 руб</span>
+            </div>
+          </div>
+          <a href="/checkout.html" class="btn cart__proceed">Оформить заказ</a>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer wrapper">
+      <div class="site-footer__container">
+        <div class="site-footer__logo"><img src="assets/images/icons/logo.png" alt="Logo" /></div>
+        <nav class="site-footer__nav">
+          <ul>
+            <li><a class="text-thin" href="#">Каталог</a></li>
+            <li><a class="text-thin" href="#">О нас</a></li>
+            <li><a class="text-thin" href="#">Оплата и доставка</a></li>
+            <li><a class="text-thin" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

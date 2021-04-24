@@ -1,0 +1,45 @@
+.size {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-family: "Tenor Sans";
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 27px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+
+    @mixin atMedium {
+      width: 2.875rem;
+      height: 2.875rem;
+      font-size: 1.25rem;
+      line-height: 41px;
+    }
+  }
+
+  &--selected {
+    border: 3px solid black;
+  }
+
+  &--item-m-right {
+    margin-right: 1.5rem;
+
+    @mixin atMedium {
+      margin-right: 3.4375rem;
+    }
+  }
+
+  &--item-m-right:last-child {
+    margin-right: 0;
+  }
+
+  &--m-bottom {
+    margin-bottom: 2.25rem;
+  }
+}

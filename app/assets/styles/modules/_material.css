@@ -1,0 +1,34 @@
+.material {
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.875rem;
+  }
+
+  &__group:last-child {
+    margin-bottom: 0;
+  }
+
+  &__checkbox {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-right: 0.4375rem;
+    appearance: none;
+    outline: none;
+    background-color: #c4c4c4;
+    border: 10px solid #c4c4c4;
+    cursor: pointer;
+    transition: border 0.15s, background-color 0.15s;
+  }
+
+  &__checkbox:checked {
+    border: 10px solid black;
+    background-color: white;
+  }
+
+  &__checkbox + label {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+}

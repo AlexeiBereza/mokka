@@ -1,0 +1,46 @@
+.swiper__catalog-single {
+  .swiper-container {
+    max-width: 100%;
+    margin-bottom: 1rem;
+
+    @mixin atSmall {
+      max-width: 300px;
+    }
+
+    @mixin atMedium {
+      max-width: 350px;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    @mixin atLarge {
+      max-width: 28.75rem;
+      margin-right: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  .swiper-main {
+    margin-bottom: 0.5rem;
+
+    @mixin atMedium {
+      margin-bottom: 1.3rem;
+    }
+
+    @mixin atLarge {
+      margin-bottom: 2.6875rem;
+    }
+  }
+}

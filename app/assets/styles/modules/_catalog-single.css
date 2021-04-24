@@ -1,0 +1,108 @@
+.catalog-single {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @mixin atMedium {
+    flex-direction: row;
+  }
+
+  &__slider {
+    @mixin atLarge {
+      flex: 0 0 28.75rem;
+    }
+  }
+
+  &__content {
+    @mixin atLarge {
+      flex: 0 0 34.875rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+
+    @mixin atSmaller {
+      font-size: 1.3rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.8rem;
+    }
+
+    @mixin atLarge {
+      margin-bottom: 2.3125rem;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 0.9rem;
+
+    @mixin atSmaller {
+      font-size: 1rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__subtitle-color {
+    margin-right: 2.6875rem;
+  }
+
+  &__subtitle-size {
+    margin-right: 0.9375rem;
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+
+    @mixin atSmaller {
+      font-size: 1.3rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.6rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.875rem;
+      margin-bottom: 2.625rem;
+    }
+  }
+
+  &__desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    @mixin atMedium {
+      font-size: 1.1rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+      margin-bottom: 2.0625rem;
+    }
+  }
+
+  &__material {
+    margin-bottom: 3.3125rem;
+  }
+
+  &__material-type {
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+
+    @mixin atMedium {
+      font-size: 1.25rem;
+    }
+  }
+}

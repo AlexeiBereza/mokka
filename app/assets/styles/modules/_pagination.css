@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  width: 100%;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  li {
+    font-size: 16px;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 31px;
+    border: 3px solid transparent;
+    opacity: 0.5;
+
+    @mixin atSmall {
+      font-size: 20px;
+      line-height: 41px;
+    }
+  }
+
+  a {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+
+    @mixin atSmall {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  li + &--selected {
+    border: 3px solid black;
+  }
+}

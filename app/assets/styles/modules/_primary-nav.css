@@ -1,0 +1,84 @@
+.primary-nav {
+  position: absolute;
+  left: -130%;
+  top: 42px;
+  height: 100vh;
+  background-color: white;
+  width: 318px;
+  padding: 1.3125rem 0.75rem;
+  transition: left 0.3s ease;
+
+  @mixin atMedium {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  &--is-visible {
+    left: 0;
+  }
+
+  &__login-mobile {
+    font-size: 16px;
+    border: 1px solid $gold;
+    background-color: transparent;
+    padding: 0.2625rem 1.375rem;
+    border-radius: 20px;
+
+    @mixin atMedium {
+      display: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1.3125rem 0;
+
+    @mixin atMedium {
+      flex-direction: row;
+      margin: 1.875rem 0;
+    }
+  }
+
+  li {
+    margin-bottom: 0.6875rem;
+
+    @mixin atMedium {
+      margin-right: 0.875rem;
+      margin-bottom: 0;
+    }
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    transition: opacity 0.2s ease-in;
+    font-size: 16px;
+    padding-bottom: 0.8125rem;
+    border-bottom: 1px solid $mainBeige;
+
+    @mixin atMedium {
+      display: inline;
+      font-size: 14px;
+      border-bottom: none;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+    }
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}

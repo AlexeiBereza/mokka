@@ -1,0 +1,37 @@
+.text-thin {
+  opacity: 0.5;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.flex,
+.flex-align {
+  display: flex;
+}
+
+.flex-align {
+  align-items: center;
+}
+
+.flex--until-medium {
+  display: flex;
+
+  @mixin atMedium {
+    display: block;
+  }
+}
+
+.item-active {
+  opacity: 1;
+}
+
+.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

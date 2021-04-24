@@ -1,0 +1,189 @@
+.page-section {
+  position: relative;
+  height: 370px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  overflow: hidden;
+
+  @mixin atMedium {
+    height: 470px;
+  }
+
+  @mixin atLarge {
+    height: 750px;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: $beigeLight;
+  }
+
+  &--white {
+    height: auto;
+  }
+
+  &--white:nth-of-type(odd) {
+    background-color: white;
+  }
+
+  &--catalog {
+    padding-top: 22px;
+    padding-bottom: 30px;
+
+    @mixin atSmall {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    @mixin atMedium {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @mixin atLarge {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__container,
+  &__container-narrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    margin: auto;
+  }
+
+  &__container {
+    max-width: 665px;
+
+    @mixin atLarge {
+      max-width: 1080px;
+    }
+  }
+
+  &__container-narrow {
+    flex-direction: column;
+    max-width: 570px;
+
+    @mixin atMedium {
+      flex-direction: row;
+    }
+  }
+
+  &__container-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    display: none;
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    @mixin atMedium {
+      width: 16.25rem;
+      display: block;
+    }
+
+    @mixin atLarge {
+      width: 27.4375rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    @mixin atMedium {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-family: "Tenor Sans";
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin: 0 0 9px;
+    text-align: center;
+
+    @mixin atSmaller {
+      font-size: 1.625rem;
+    }
+
+    @mixin atMedium {
+      font-size: 2.125rem;
+      text-align: left;
+      margin: 0 0 7px -1px;
+    }
+
+    @mixin atLarge {
+      font-size: 3rem;
+      text-align: left;
+      margin: 0 0 20px -1px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0 0 29px -2px;
+    text-align: center;
+
+    @mixin atSmaller {
+      font-size: 1.125rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.375rem;
+      text-align: left;
+      margin: 0 0 36px 0;
+    }
+
+    @mixin atLarge {
+      font-size: 2.125rem;
+      text-align: left;
+      margin: 0 0 51px -2px;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    max-width: 610px;
+    text-align: center;
+    margin: auto;
+    line-height: 140.62%;
+    font-weight: 400;
+    overflow: visible;
+
+    @mixin atLarge {
+      max-width: 810px;
+    }
+  }
+
+  &__subscribe {
+    margin: auto;
+  }
+
+  &__m-top {
+    margin-top: 2.4375rem;
+
+    @mixin atMedium {
+      margin-top: 4.125rem;
+    }
+  }
+
+  &__subscribe-input {
+    margin-bottom: 1.125rem;
+
+    @mixin atMedium {
+      margin-bottom: 0;
+    }
+  }
+}

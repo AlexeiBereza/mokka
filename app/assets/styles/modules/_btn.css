@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  padding: 13px 25px 12px;
+  border: 2px solid $mainBlack;
+  background-color: transparent;
+  font-weight: 300;
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  min-width: 188px;
+  text-align: center;
+  outline: none;
+
+  @mixin atMedium {
+    font-size: 1rem;
+    min-width: 221px;
+    padding: 15px 33px 13px;
+  }
+
+  @mixin atLarge {
+    font-size: 1.25rem;
+    min-width: 265px;
+    padding: 19px 35px 17px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--hero {
+    opacity: 0.5;
+  }
+
+  &--hero:hover {
+    opacity: 1;
+  }
+
+  &--center-until-medium {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @mixin atMedium {
+      left: auto;
+      transform: none;
+    }
+  }
+}

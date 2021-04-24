@@ -1,0 +1,17 @@
+.catalog-filter {
+  display: inline-block;
+  font-size: 13px;
+  padding-right: 15px;
+
+  @mixin atSmaller {
+    font-size: 15px;
+  }
+
+  @mixin atSmall {
+    font-size: 17px;
+  }
+
+  @mixin atLarge {
+    display: none;
+  }
+}

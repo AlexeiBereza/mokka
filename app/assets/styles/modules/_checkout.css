@@ -1,0 +1,161 @@
+.checkout {
+  position: relative;
+
+  &__heading {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    @mixin atSmaller {
+      font-size: 20px;
+    }
+
+    @mixin atSmall {
+      font-size: 22px;
+    }
+
+    @mixin atMedium {
+      font-size: 36px;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &__container {
+    margin-bottom: 3rem;
+
+    @mixin atMedium {
+      margin-bottom: 4.75rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @mixin atMedium {
+      flex-direction: row;
+      margin-bottom: 3rem;
+    }
+
+    @mixin atLarge {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__delivery,
+  &__payment {
+    flex-basis: 48.7%;
+    border: 1px solid black;
+    padding: 20px 15px;
+
+    @mixin atSmaller {
+      padding: 30px 25px;
+    }
+
+    @mixin atMedium {
+      padding: 45px 35px;
+    }
+
+    @mixin atLarge {
+      padding: 3.875rem 2.9375rem;
+    }
+  }
+
+  &__delivery {
+    margin-bottom: 15px;
+
+    @mixin atMedium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.0625rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+
+    @mixin atSmaller {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 20px;
+    }
+  }
+
+  &__change {
+    position: relative;
+    font-size: 12px;
+    font-weight: 100;
+
+    @mixin atSmaller {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 17px;
+    }
+
+    @mixin atLarge {
+      font-size: 20px;
+    }
+  }
+
+  &__change::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    background-color: black;
+
+    @mixin atSmaller {
+      bottom: 1px;
+    }
+  }
+
+  &__type {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 14px;
+
+    @mixin atSmaller {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 20px;
+    }
+  }
+
+  &__details {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0.4375rem;
+    line-height: 1.2;
+
+    @mixin atSmaller {
+      font-size: 16px;
+    }
+
+    @mixin atMedium {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

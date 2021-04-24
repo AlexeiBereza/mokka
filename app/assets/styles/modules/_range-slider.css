@@ -1,0 +1,90 @@
+.range-slider {
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2.125rem;
+  }
+
+  #range-slider {
+    margin-top: -20px;
+  }
+
+  .noUi-target {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.5);
+      top: 51%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .noUi-horizontal {
+    height: 40px;
+
+    .noUi-handle {
+      box-shadow: none;
+      background: black;
+      border-radius: 50%;
+      border: none;
+      width: 7px;
+      height: 7px;
+      top: -3px;
+      right: -6px;
+      outline: none;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .noUi-tooltip {
+      border: none;
+      font-size: 0.625rem;
+      opacity: 0.5;
+      left: 100%;
+      bottom: -24px;
+      transition: bottom 0.15s ease;
+    }
+
+    .noUi-tooltip--top {
+      bottom: 11px;
+    }
+
+    .noUi-touch-area {
+      cursor: pointer;
+    }
+  }
+
+  .noUi-connects {
+    position: relative;
+  }
+
+  .noUi-connect {
+    position: absolute;
+    background: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: black;
+    }
+  }
+
+  .noUi-origin {
+    top: 50%;
+  }
+}

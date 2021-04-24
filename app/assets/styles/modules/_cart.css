@@ -1,0 +1,403 @@
+.cart {
+  &__heading {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
+
+    @mixin atSmall {
+      font-size: 19px;
+      margin-bottom: 2.7rem;
+    }
+
+    @mixin atMedium {
+      font-size: 22px;
+      margin-bottom: 3.75rem;
+    }
+
+    @mixin atLarge {
+      font-size: 30px;
+      margin-bottom: 5.125rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 3.625rem;
+    z-index: 1;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1.875rem 1.5625rem;
+
+    @mixin atMedium {
+      padding: 1.875rem 2.8125rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @mixin atLarge {
+      padding: 1.875rem 4.0625rem;
+    }
+
+    @mixin atExtraLarge {
+      padding: 1.875rem 0;
+    }
+  }
+
+  &__item::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background: black;
+    z-index: 1;
+  }
+
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__table-heads {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    top: -32px;
+    left: 0;
+    font-size: 1.25rem;
+    font-weight: 100;
+
+    @mixin atMedium {
+      display: flex;
+    }
+  }
+
+  &__table-heads span {
+    text-align: center;
+  }
+
+  &__table-heads span:last-child {
+    text-align: right;
+  }
+
+  &__image,
+  &__image-head {
+    margin-right: 0.875rem;
+    flex-basis: 7.5rem;
+
+    @mixin atMedium {
+      flex-basis: 10.625rem;
+    }
+
+    @mixin atExtraLarge {
+      margin-right: 0;
+    }
+  }
+
+  &__desc,
+  &__desc-head {
+    @mixin atMedium {
+      flex-basis: 22.125rem;
+    }
+  }
+
+  &__quantity,
+  &__quantity-head {
+    @mixin atMedium {
+      flex-basis: 10rem;
+    }
+  }
+
+  &__price,
+  &__price-head {
+    @mixin atMedium {
+      flex-basis: 10rem;
+    }
+  }
+
+  &__actions,
+  &__actions-head {
+    @mixin atMedium {
+      flex-basis: 13.125rem;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @mixin atMedium {
+      flex-direction: row;
+      align-items: center;
+      flex-basis: 59.375rem;
+    }
+  }
+
+  &__desc {
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 0.9375rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    @mixin atSmaller {
+      font-size: 1rem;
+      margin-bottom: 0.9375rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1.1rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__article,
+  &__color {
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+
+    @mixin atSmaller {
+      font-size: 0.875rem;
+    }
+
+    @mixin atMedium {
+      margin-bottom: 0.7rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__size {
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+
+    @mixin atSmaller {
+      font-size: 0.875rem;
+    }
+
+    @mixin atMedium {
+      margin-bottom: 0.7rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__selected-color {
+    display: inline-block;
+    border-radius: 50%;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-left: 0.8125rem;
+    padding-top: 5px;
+    vertical-align: middle;
+
+    @mixin atMedium {
+      width: 1.1875rem;
+      height: 1.1875rem;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    margin-bottom: 0.5rem;
+
+    @mixin atMedium {
+      justify-content: space-around;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    text-align: center;
+    margin-bottom: 0.9375rem;
+
+    @mixin atMedium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: flex-end;
+
+    @mixin atMedium {
+      align-items: center;
+    }
+  }
+
+  &__remove,
+  &__add,
+  &__amount {
+    font-size: 1rem;
+  }
+  &__remove,
+  &__add {
+    @mixin atMedium {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__remove,
+  &__add,
+  &__star,
+  &__delete {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__delete,
+  &__star {
+    padding: 0;
+    font-size: 0.8rem;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__delete {
+    width: 15px;
+    margin-right: 1.25rem;
+
+    @mixin atMedium {
+      width: 30px;
+      margin-left: auto;
+      margin-right: 1.5rem;
+      padding-top: 3px;
+    }
+  }
+
+  &__star {
+    width: 19px;
+    @mixin atMedium {
+      width: 29px;
+    }
+  }
+
+  &__total-container {
+    font-size: 0.9rem;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    @mixin atSmall {
+      max-width: 16.875rem;
+    }
+
+    @mixin atLarge {
+      display: inline-block;
+      font-size: 1.125rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__cart-price,
+  &__promo-code {
+    margin-bottom: 1rem;
+
+    @mixin atLarge {
+      margin-bottom: 1.5625rem;
+    }
+  }
+
+  &__promo-code {
+    display: flex;
+
+    span {
+      flex-shrink: 0;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid black;
+      font-size: 16px;
+      padding: 0 5px;
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  &__cart-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__total {
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+    @mixin atLarge {
+      margin-top: 3rem;
+    }
+  }
+
+  &__bottom-block {
+    position: relative;
+  }
+
+  &__proceed {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @mixin atSmall {
+      left: 0;
+      transform: none;
+    }
+
+    @mixin atLarge {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.super-h1-tag {
+  display: inline-block;
+  color: green;
+  margin-left: 120px;
+  text-transform: uppercase;
+  font-size: 50px;
+}
