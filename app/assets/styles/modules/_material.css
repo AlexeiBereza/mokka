@@ -1,4 +1,12 @@
 .material {
+  &--m-bottom {
+    margin-bottom: 2rem;
+
+    @mixin atLarge {
+      margin-bottom: 0;
+    }
+  }
+
   &__group {
     display: flex;
     align-items: center;

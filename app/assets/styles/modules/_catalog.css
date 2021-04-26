@@ -1,5 +1,7 @@
 .catalog {
+  position: relative;
   display: flex;
+  z-index: 70;
 
   &__container {
     flex: 1;

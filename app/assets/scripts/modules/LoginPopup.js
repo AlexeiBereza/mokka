@@ -12,20 +12,28 @@ class LoginPopup {
   }
 
   events() {
-    this.button.addEventListener("click", e => this.showLogin(e))
-    this.mobileButton.addEventListener("click", e => this.showLogin(e))
-    this.layout.addEventListener("click", e => this.hideLogin(e))
-    window.addEventListener("keyup", e => this.hideLogin(e))
+    this.button.addEventListener("click", () => showElement(this.popup, "is-visible", true))
+    this.mobileButton.addEventListener("click", () => showElement(this.popup, "is-visible", true))
+    this.layout.addEventListener("click", e => hideElement(e, this.popup, "is-visible", true))
+    window.addEventListener("keyup", e => hideElement(e, this.popup, "is-visible", true))
   }
+
+  // showLogin() {
+  //   showElement(this.layout)
+  //   showElement(this.popup)
+  // }
 
   showLogin() {
-    showElement(this.layout)
-    showElement(this.popup)
+    showElement(this.popup, "is-visible", true)
   }
 
+  // hideLogin(e) {
+  //   hideElement(e, this.layout)
+  //   hideElement(e, this.popup)
+  // }
+
   hideLogin(e) {
-    hideElement(e, this.layout)
-    hideElement(e, this.popup)
+    hideElement(e, this.popup, "is-visible", true)
   }
 
   injectHTML() {

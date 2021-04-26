@@ -35,3 +35,7 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.z-index-top {
+  z-index: 500;
+}

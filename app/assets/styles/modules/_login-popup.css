@@ -9,7 +9,7 @@
   visibility: hidden;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 200;
+  z-index: 201;
 
   @mixin atSmaller {
     width: 22rem;

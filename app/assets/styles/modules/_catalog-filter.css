@@ -1,14 +1,18 @@
 .catalog-filter {
   display: inline-block;
-  font-size: 13px;
-  padding-right: 15px;
+  font-size: 11px;
+  border: 1px solid $gold;
+  background-color: transparent;
+  padding: 0.2625rem 1.375rem;
+  border-radius: 20px;
+  cursor: pointer;
 
   @mixin atSmaller {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   @mixin atSmall {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   @mixin atLarge {
