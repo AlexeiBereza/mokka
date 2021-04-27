@@ -1,6 +1,6 @@
 .catalog-filter {
   display: inline-block;
-  font-size: 11px;
+  font-size: 16px;
   border: 1px solid $gold;
   background-color: transparent;
   padding: 0.2625rem 1.375rem;
@@ -8,7 +8,7 @@
   cursor: pointer;
 
   @mixin atSmaller {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   @mixin atSmall {
@@ -17,5 +17,9 @@
 
   @mixin atLarge {
     display: none;
+  }
+
+  &__apply {
+    font-size: 20px;
   }
 }

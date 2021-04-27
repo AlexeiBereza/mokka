@@ -3,6 +3,7 @@ import { hideElement, showElement } from "./elementToggle"
 class catalogFilter {
   constructor() {
     this.catalogSection = document.querySelector(".page-section--catalog")
+    this.catalogContent = document.querySelector(".catalog__content")
     this.filterButton = document.querySelector(".catalog-filter")
     this.applyButton = document.querySelector(".catalog-filter__apply")
     this.sideFilter = document.querySelector(".side-filter")
@@ -17,18 +18,20 @@ class catalogFilter {
   }
 
   showFilter() {
-    showElement(this.sideFilter, "side-filter--is-visible", false)
+    showElement(this.sideFilter, "side-filter--is-visible", false, true)
     showElement(this.catalogSection, "z-index-top", false)
+    this.catalogContent.classList.add("no-events")
   }
 
   hideFilter(e) {
     if (e.target.closest(".page-section--catalog")) {
       if ((!e.target.classList.contains("catalog-filter") && !e.target.closest(".side-filter")) || e.target.classList.contains("catalog-filter__apply")) {
-        hideElement(e, this.sideFilter, "side-filter--is-visible", false)
+        hideElement(e, this.sideFilter, "side-filter--is-visible", false, true)
         hideElement(e, this.catalogSection, "z-index-top", false)
+        this.catalogContent.classList.remove("no-events")
       }
     } else {
-      hideElement(e, this.sideFilter, "side-filter--is-visible", false)
+      hideElement(e, this.sideFilter, "side-filter--is-visible", false, true)
       hideElement(e, this.catalogSection, "z-index-top", false)
     }
   }

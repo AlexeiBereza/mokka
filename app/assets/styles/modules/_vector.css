@@ -322,6 +322,10 @@
     height: 569px;
     bottom: 90px;
     left: -311px;
+
+    @mixin atLarge {
+      z-index: 100;
+    }
   }
 
   &::after {

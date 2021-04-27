@@ -8,29 +8,27 @@ class LoginPopup {
     this.button = document.querySelector(".site-header__login")
     this.mobileButton = document.querySelector(".primary-nav__login-mobile")
     this.popup = document.querySelector(".login-popup")
+    this.sideFilter = document.querySelector(".side-filter")
+    this.catalogSection = document.querySelector(".page-section--catalog")
     this.events()
   }
 
   events() {
-    this.button.addEventListener("click", () => showElement(this.popup, "is-visible", true))
-    this.mobileButton.addEventListener("click", () => showElement(this.popup, "is-visible", true))
-    this.layout.addEventListener("click", e => hideElement(e, this.popup, "is-visible", true))
-    window.addEventListener("keyup", e => hideElement(e, this.popup, "is-visible", true))
+    this.button.addEventListener("click", () => this.showLogin())
+    this.mobileButton.addEventListener("click", () => this.showLogin())
+    this.layout.addEventListener("click", e => hideElement(e, this.popup, "is-visible", true, true))
+    window.addEventListener("keyup", e => hideElement(e, this.popup, "is-visible", true, true))
   }
-
-  // showLogin() {
-  //   showElement(this.layout)
-  //   showElement(this.popup)
-  // }
 
   showLogin() {
-    showElement(this.popup, "is-visible", true)
+    if (this.sideFilter) {
+      if (this.sideFilter.classList.contains("side-filter--is-visible")) {
+        this.sideFilter.classList.remove("side-filter--is-visible")
+        this.catalogSection.classList.remove("z-index-top")
+      }
+    }
+    showElement(this.popup, "is-visible", true, true)
   }
-
-  // hideLogin(e) {
-  //   hideElement(e, this.layout)
-  //   hideElement(e, this.popup)
-  // }
 
   hideLogin(e) {
     hideElement(e, this.popup, "is-visible", true)

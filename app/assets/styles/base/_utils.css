@@ -39,3 +39,7 @@
 .z-index-top {
   z-index: 500;
 }
+
+.no-events {
+  pointer-events: none;
+}

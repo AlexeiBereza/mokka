@@ -27,7 +27,6 @@
   }
 
   &--catalog {
-    position: relative;
     padding-top: 22px;
     padding-bottom: 30px;
     z-index: 70;

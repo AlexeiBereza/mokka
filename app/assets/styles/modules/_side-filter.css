@@ -6,9 +6,11 @@
   width: 324px;
   height: 100vh;
   padding: 30px;
+  box-shadow: 0 0 20px 15px rgb(0, 0, 0, 0.15);
   overflow-y: scroll;
+  overflow-x: hidden;
   transition: left 0.3s ease;
-  z-index: 70;
+  z-index: 500;
 
   @mixin atLarge {
     position: static;
@@ -20,7 +22,9 @@
     height: auto;
     margin-right: 30px;
     padding: 0;
-    overflow-y: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-shadow: none;
   }
 
   &--is-visible {
