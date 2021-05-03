@@ -1,20 +1,20 @@
 .swiper__catalog-single {
   .swiper-container {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 1rem;
 
     @mixin atSmall {
-      max-width: 300px;
+      width: 300px;
     }
 
     @mixin atMedium {
-      max-width: 350px;
+      width: 350px;
       margin-bottom: 0;
       margin-right: 30px;
     }
 
     @mixin atLarge {
-      max-width: 28.75rem;
+      width: 28.75rem;
       margin-right: 0;
     }
   }

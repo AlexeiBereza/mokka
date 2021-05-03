@@ -24,6 +24,7 @@ class SingleProductSlider {
     })
     this.primarySlider = new Swiper(".swiper-main", {
       spaceBetween: 10,
+      slidesPerView: 1,
       thumbs: {
         swiper: this.thumbsSlider,
         autoScrollOffset: 4

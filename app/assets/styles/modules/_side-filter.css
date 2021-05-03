@@ -13,17 +13,17 @@
   z-index: 500;
 
   @mixin atLarge {
-    position: static;
+    position: relative;
     left: auto;
     top: auto;
     display: block;
     flex: 0 0 16.5rem;
     width: auto;
     height: auto;
-    margin-right: 30px;
     padding: 0;
-    overflow-y: auto;
-    overflow-x: auto;
+    margin-right: 40px;
+    overflow-y: visible;
+    overflow-x: visible;
     box-shadow: none;
   }
 
